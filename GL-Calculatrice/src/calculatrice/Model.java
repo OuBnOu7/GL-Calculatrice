@@ -37,6 +37,8 @@ public class Model {
 		this.stack.clear();
 	}
 	
-	private void add(){}
+	private void add(){
+		System.out.println("ss");
+	}
 	
 }

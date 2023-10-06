@@ -4,26 +4,26 @@ import java.util.Stack;
 
 
 public class Model {
-	private Stack<Double> stack;
+	public Stack<Double> stack;
 	
-	private Model() {
+	public Model() {
 		this.stack = new Stack<>();
 	}
 	
-	private void push(double x){
+	public void push(double x){
 		this.stack.push(x);
 	}
 	
-	private void pop(){
-		if(!this.stack.empty()) {this.stack.pop();}
-		else {System.out.println("Stack is empty !");}
+	public double pop(){
+		if(!this.stack.empty()) {return this.stack.pop();}
+		else {System.out.println("Stack is empty !"); return 0;}
 	}
 	
-	private void drop(){
+	public void drop(){
 		this.stack.pop();
 	}
 	
-	private void swap(){
+	public void swap(){
 		if(this.stack.size()>=2) {
 			double a = this.stack.pop();
 			double b = this.stack.pop();
@@ -33,12 +33,21 @@ public class Model {
 		else{System.out.println("There is less than 2 elements in the stack !");}
 	}
 	
-	private void clear(){
+	public void clear(){
 		this.stack.clear();
 	}
 	
-	private void add(){
-		System.out.println("ss");
+	public void add(){
+		double a = this.stack.pop();
+		double b = this.stack.pop();
+		this.stack.push(a+b);
+		
+	}
+	
+	public void show() {
+		double a = this.stack.pop();
+		System.out.println(a);
+		this.stack.push(a);
 	}
 	
 }

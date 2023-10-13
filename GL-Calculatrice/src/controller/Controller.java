@@ -1,4 +1,4 @@
-package calculatrice;
+package controller;
 
 public class Controller {
 	
